@@ -1,0 +1,16 @@
+[submodule "layers/meta-rockchip"]
+	path = layers/meta-rockchip
+	url = https://git.yoctoproject.org/meta-rockchip
+	branch = kirkstone
+[submodule "layers/poky"]
+	path = layers/poky
+	url = https://git.yoctoproject.org/poky
+	branch = kirkstone
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = https://git.openembedded.org/meta-openembedded
+	branch = kirkstone
+[submodule "layers/meta-arm"]
+	path = layers/meta-arm
+	url = https://git.yoctoproject.org/meta-arm
+	branch = kirkstone

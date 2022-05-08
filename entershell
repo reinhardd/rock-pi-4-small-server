@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# [[ $_ != $0 ]] && echo "Script is being sourced" || echo "Script is a subshell"
+
+if [[ $_ == $0 ]]; then
+    echo "Script is subshell -> you should source $0"
+    exit
+#else
+#    echo "Script is sourced"
+fi
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+CDIR=`pwd`
+
+cd $THIS_DIR
+
+source config.env
+
+echo -e "simple yoctoshell version 0.0.0\n"
+
+if [ "$DL_DIR" = "" ]; then
+    echo "need a DL_DIR specified in config.env"
+    return
+fi
+
+echo -e "using download directory  $DL_DIR\n"
+
+if [ "$MACHINE" = "" ]; then
+  if [ -f .last_machine ]; then
+    MACHINE=$(<.last_machine)
+  fi
+fi
+
+if [ "$MACHINE" = "" ]; then
+    echo "neither env var MACHINE is set nor could the last build target detected "
+    echo ""
+    echo "MACHINE should be set in the outer environment"
+    echo "  i.e.: \"MACHINE=qemux86-64 source entershell\""
+    return
+fi
+
+export MACHINE
+export TEMPLATECONF=$PWD/config
+export DL_DIR
+
+(cd config; ln -sf "${MACHINE}_bblayers.conf.sample" bblayers.conf.sample)
+
+echo "$MACHINE" >.last_machine
+
+echo -e "enter bitbake shell for MACHINE: $MACHINE"
+
+OLDPATH="$PATH"
+
+source layers/poky/oe-init-build-env build_$MACHINE
+
+export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS DL_DIR"
+bitbake-layers show-layers
+
+# cd $CDIR
+echo "enter bash for bitbaking. type exit to leave"
+bash
+
+# restore old paths
+PATH="$OLDPATH"
+cd $CDIR
+unset MACHINE
