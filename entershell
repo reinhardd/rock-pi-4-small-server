@@ -52,9 +52,10 @@ echo -e "enter bitbake shell for MACHINE: $MACHINE"
 
 OLDPATH="$PATH"
 
+export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS DL_DIR HTTPS_CERT_FILE HTTPS_KEY_FILE"
+
 source layers/poky/oe-init-build-env build_$MACHINE
 
-export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS DL_DIR"
 bitbake-layers show-layers
 
 # cd $CDIR
