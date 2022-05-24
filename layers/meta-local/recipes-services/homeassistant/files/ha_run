@@ -1,0 +1,26 @@
+#!/bin/bash
+
+PRODUCTIVE=2022.5.5
+
+if [ -f /etc/homeassistant.conf ]; then
+    source /etc/homeassistant.conf
+else
+    source /etc/homeassistant.conf.sample
+fi
+
+BASE=/opt/homeassistant
+DESTDIR=homeassistant-$PRODUCTIVE
+
+cd ~
+echo "runnig ha from $PWD"
+
+if [ ! -d ~/$DESTDIR ]; then
+    echo "installation missing"
+    exit 1
+fi
+
+cd ~/$DESTDIR
+source bin/activate
+python3 -m pip list >before.txt
+hass
+python3 -m pip list >after.txt

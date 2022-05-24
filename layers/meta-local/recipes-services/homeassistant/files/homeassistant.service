@@ -1,0 +1,11 @@
+[Unit]
+Description=homeassistant server
+After=syslog.target network.target 
+
+[Service]
+User=homeassistant
+ExecStart=/usr/bin/ha_run
+ExecStop=/bin/kill hass
+
+[Install]
+WantedBy=multi-user.target
