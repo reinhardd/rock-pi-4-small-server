@@ -9,7 +9,10 @@ inherit pypi setuptools3 useradd systemd
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 PYPI_PACKAGE = "Radicale"
-SRC_URI += "file://radicale.service"
+SRC_URI += " \
+    file://radicale.service \
+    file://radicale_location.conf \
+"
 
 SRC_URI[md5sum] = "cb33912d023e40b3f4a72e20cefe4686"
 SRC_URI[sha256sum] = "7c0bec2666c87671bc95935052d2aec78ceeea699a4802b500c4dd5a7e6d3b5a"
@@ -29,6 +32,8 @@ do_install:append () {
 	install -m755 radicale.wsgi ${D}${datadir}/radicale/
 	install -d ${D}${systemd_unitdir}/system/
     install -m 0644 ${WORKDIR}/radicale.service ${D}${systemd_unitdir}/system/
+    install -d ${D}${sysconfdir}/nginx/locations
+    install -m 0644 ${WORKDIR}/radicale_location.conf ${D}${sysconfdir}/nginx/locations/
 }
 
 pkg_postinst_ontarget:${PN} () {
