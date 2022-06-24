@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# runs an simple and unsecured http package server from the machine's deploy dir
+#
 
 if [[ $_ == $0 ]]; then
     :
