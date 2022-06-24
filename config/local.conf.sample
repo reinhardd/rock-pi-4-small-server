@@ -238,9 +238,17 @@ PACKAGECONFIG:append:pn-systemd = " coredump timesyncd"
 EXTRA_IMAGE_FEATURES:append = " package-management ssh-server-openssh splash"
 #
 ##################################
+#
+# use PRSERV with history
+#   possibly a candidate for config.env
+#
+PRSERV_HOST = "localhost:0"
+INHERIT += "buildhistory"
+BUILDHISTORY_COMMIT = "1"
 
 #
 # build it for germany
+#    make this configurable via config.env
 #
 DEFAULT_TIMEZONE = "Europe/Berlin"
 IMAGE_LINGUAS = "de-de en-us"
