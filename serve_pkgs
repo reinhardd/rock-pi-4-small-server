@@ -1,0 +1,56 @@
+#!/bin/bash
+
+if [[ $_ == $0 ]]; then
+    :
+else
+    echo "do not source $_"
+    return
+fi
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+CDIR=`pwd`
+
+cd $THIS_DIR
+
+source ./config.env
+
+if [ "$MACHINE" = "" ]; then
+    if [ -f .last_machine ]; then
+        MACHINE=$(<.last_machine)
+        echo "using MACHINE $MACHINE from .last_machine"
+    else
+        echo "no MACHINE specified! use: MACHINE=xxx $0"
+        echo "   or run a build first"
+        exit 1
+    fi
+fi
+
+#
+# convert - to _ 
+# because - is no allowed as variable name
+
+MACHINE_=$(echo "$MACHINE" | tr - _)
+
+MPORT="HTTP_PORT_"$MACHINE_
+
+echo "x1"
+
+if [ "${!MPORT}" != "" ]; then
+    echo "port ${!MPORT} configured for machine $MACHINE" 
+    deploydir="build_$MACHINE/tmp/deploy"
+    if [ ! -d "$deploydir" ]; then
+        echo "deploy directory $deploydir does not exist"
+        exit 2
+    else
+        echo "run server for machine $MACHINE on port ${!MPORT} from $deploydir"
+        http-server -a --port ${!MPORT} $deploydir
+    fi
+else
+    echo "no port configured for machine $MACHINE"
+    echo "add a line \"HTTP_PORT_$MACHINE_=<someportno>\" to config.env"
+    exit 3
+fi
+
+
+cd $CDIR
