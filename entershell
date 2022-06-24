@@ -44,6 +44,18 @@ export MACHINE
 export TEMPLATECONF=$PWD/config
 export DL_DIR
 
+# default port for ipk feed server
+DISTRO_FEED_MACHINE_PORT=8100
+
+MACHINE_=$(echo "$MACHINE" | tr - _)
+MACHINE_DEPLOY_PORT="HTTP_PORT_$MACHINE_"
+
+if [ "${!MACHINE_DEPLOY_PORT}" != "" ]; then
+  DISTRO_FEED_MACHINE_PORT=$(echo "${!MACHINE_DEPLOY_PORT}")  
+fi
+export DISTRO_FEED_URI="http://$(hostname):$DISTRO_FEED_MACHINE_PORT/ipk"
+
+BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS DISTRO_FEED_URI"
 (cd config; ln -sf "${MACHINE}_bblayers.conf.sample" bblayers.conf.sample)
 
 echo "$MACHINE" >.last_machine
