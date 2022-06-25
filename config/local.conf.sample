@@ -254,4 +254,4 @@ DEFAULT_TIMEZONE = "Europe/Berlin"
 IMAGE_LINGUAS = "de-de en-us"
 GLIBC_GENERATE_LOCALES = "de_DE.UTF-8 en_US.UTF-8"
 
-
+INHERIT += "rm_work"
