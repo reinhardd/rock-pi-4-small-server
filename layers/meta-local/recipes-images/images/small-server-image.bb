@@ -31,7 +31,7 @@ CORE_IMAGE_BASE_INSTALL += "python3-wheel python3-pip homeassistant-env"
 #
 # image/machine setup
 #
-CORE_IMAGE_BASE_INSTALL += " htop nano lsof psmisc distro-feed-configs"
+CORE_IMAGE_BASE_INSTALL += " htop nano lsof psmisc tzdata distro-feed-configs"
 
 QB_MEM = "-m 512"
 
