@@ -8,6 +8,12 @@ else
     source /etc/homeassistant.conf.sample
 fi
 
+getent passwd homeassistant >/dev/null 2&>1
+
+if [ $? -ne 0 ]; then
+    useradd --system --home /opt/homeassistant --no-create-home --shell /bin/bash -G uucp,dialout
+fi
+
 BASE=/opt/homeassistant
 DESTDIR=homeassistant-$PRODUCTIVE
 
