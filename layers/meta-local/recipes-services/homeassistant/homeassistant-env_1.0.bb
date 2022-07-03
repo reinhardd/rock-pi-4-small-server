@@ -10,15 +10,24 @@ SRC_URI = " \
     file://ha_run \
     file://hass_location.conf \
 "
-inherit systemd allarch
+inherit systemd allarch insane 
+
+INSANE_SKIP:${PN} += "dev-deps"
 
 RH1 = "${ROOT_HASS}"
 RH2 = "${ROOT_HASS_WEBSOCKET}"
 
-RDEPENDS:${PN} = "nginx bash"
+#
+# glibc-utils: getent
+#
+RDEPENDS:${PN} = "nginx bash glibc-utils \
+    gcc-symlinks g++-symlinks binutils \ 
+    python3-dev \
+    "
 
 do_install:append() {
     install -d ${D}${sysconfdir}
+    install -d ${D}/opt/homeassistant
     install -m755 ${WORKDIR}/homeassistant.conf.sample ${D}${sysconfdir}/
     install -d ${D}${systemd_unitdir}/system/
     install -m 0644 ${WORKDIR}/homeassistant.service ${D}${systemd_unitdir}/system/
@@ -30,6 +39,6 @@ do_install:append() {
     sed -i "s/HASS_API_ROOT/${ROOT_HASS_WEBSOCKET}/g" ${D}${sysconfdir}/nginx/locations/hass_location.conf
 }
 
-FILES:${PN} += "${systemd_unitdir}"
+FILES:${PN} += "${systemd_unitdir} /opt/homeassistant"
 
 SYSTEMD_SERVICE_${PN} = "homeassistant.service"
