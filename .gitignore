@@ -2,3 +2,4 @@ build_*
 config.env
 .last_machine
 config/bblayers.conf.sample
+backup
