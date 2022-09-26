@@ -18,3 +18,7 @@
 	url = https://git.yoctoproject.org/meta-arm
 	branch = kirkstone
 	update = rebase
+[submodule "layers/meta-virtualization"]
+	path = layers/meta-virtualization
+	url = https://git.yoctoproject.org/meta-virtualization
+	branch = kirkstone
