@@ -1,0 +1,534 @@
+ cd /
+ cd /home/reinhard
+convert -density 600 WOA22_RunningOrder_SW.pdf  WOA_RO.png
+krita
+sudo pacman -Syu
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+youtube-dl -q https://xhamster.com/videos/sp-10-xhr20uO &
+youtube-dl -q https://xhamster.com/videos/sp-28-xhUJ3ij &
+youtube-dl -q https://xhamster.com/videos/spanking-119-xhYCco2 &
+youtube-dl -q https://xhamster.com/videos/spanking-105-xh9Bxjw &
+youtube-dl -q https://xhamster.com/videos/spanking-79-xhreMo0 &
+youtube-dl -q https://xhamster.com/videos/spanking-82-xhJM9p5 &
+youtube-dl -q https://xhamster.com/videos/spanking-xhOpaFQ &
+youtube-dl -q https://xhamster.com/videos/spanking-melodies-6449441 &
+youtube-dl -q https://xhamster.com/videos/linda-and-sophie-caned-6371066 &
+youtube-dl -q https://xhamster.com/videos/42324-12492693 &
+youtube-dl -q https://xhamster.com/videos/rebel-at-st-angela-s-xhFIvNS &
+youtube-dl -q https://xhamster.com/videos/english-schoolgirl-disciplined-xh30NhA &
+rdfind -h
+cd ..
+cd ..
+rdfind .cvolm
+cat results.txt 
+clear
+ cd /
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+sudo pacman -Syu
+avahi-browse -a
+avahi-browse -a
+ip neighbor
+ping 192.160.0.118
+ping 192.168.0.118
+ping 192.168.0.118
+ping 192.168.0.118
+wireshark 
+exit
+sudo pacman -Syu
+exit
+cd ~/Documents/
+pwd
+cd privat/
+ls
+cd ..
+ls
+cd privat/
+ls
+cd Gebäude/
+ls
+cd Heizungsumbau/
+ls
+okular document.pdf 
+exit
+dolphin
+exit
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+journalctl -b
+exit
+sudo pacman -Syu
+sudo reboot
+exit
+ cd /home/reinhard/Documents/privat/Gebäude/Heizungsumbau/Belege
+ clear
+ls -l
+sudo chmod a+rw Scannen*
+ls -l
+ cd /
+ cd /home/reinhard/Documents/privat/Gebäude/Heizungsumbau/Belege
+convert Scannen.jpg -rotate 90 Scannen_r.jpg
+convert Scannen.jpg -rotate 180 Scannen_r.jpg
+convert Scannen0001.jpg -rotate 180 Scannen0001_r.jpg
+convert Scannen0002.jpg -rotate 180 Scannen0002_r.jpg
+convert Scannen0003.jpg -rotate 180 Scannen0003_r.jpg
+convert Scannen0004.jpg -rotate 180 Scannen0004_r.jpg
+convert Scannen0005.jpg -rotate 180 Scannen0005_r.jpg
+ cd /
+ cd /home/reinhard/Documents/privat/Gebäude/Heizungsumbau/Belege
+ cd /
+sudo pacman -Syu
+exit
+ cd /home/reinhard
+ clear
+exit
+sudo pacman -Syu
+ssh rockpiha
+ssh root@rockpiha
+pacman -S certbot
+pacman -Ql certbot
+systemctl status certbot-renew.service
+systemctl start certbot-renew.service
+cat /usr/lib/systemd/system/certbot-renew.timer
+systemctl status certbot-renew.service
+systemctl status certbot-renew.service
+systemctl status certbot-renew.service
+systemctl status certbot-renew.service
+systemctl status certbot-renew.service
+certbot -h
+sudo certbot certificates
+sudo certbot -v
+sudo cat /tmp/tmpvhk0obzg/log
+systemctl status certbot-renew.service
+systemctl status certbot-renew.service
+certbot -h
+certbot -h commands
+systemctl status certbot-renew.service
+certbot -h commands
+certbot certificates
+sudo certbot certificates
+sudo renew -h
+sudo certbot renew -h
+sudo certbot renew certonly
+sudo certbot certificates
+sudo certbot renew s11hattl.dns.army certonly
+sudo certbot certonly --force-renew -d s11hattl.dns.army
+sudo certbot renew -d s11hattl.dns.army
+sudo certbot certificate renew -d s11hattl.dns.army
+sudo certbot renew --d
+sudo certbot renew --help
+sudo certbot renew --help
+sudo certbot renew -d s11hattl.dns.army
+sudo certbot renew -d s11hattl.dns.army --manual
+sudo certbot renew -d s11hattl.dns.army --webroot
+sudo certbot renew --webroot -d s11hattl.dns.army 
+sudo certbot certificate renew --webroot -d s11hattl.dns.army 
+sudo certbot certificate 
+sudo certbot certificate s
+sudo certbot certificates
+sudo certbot -d s11hattl.dns.army
+sudo certbot -d s11hattl.dns.army --manual --preferred-challenges dns certonly
+sudo certbot -d s11hattl.dns.army --manual --preferred-challenges dns certonly
+sudo certbot -d s11hattl.dns.army 
+sudo certbot certificates
+stat /etc/letsencrypt/live/s11hattl.dns.army/fullchain.pem
+sudo stat /etc/letsencrypt/live/s11hattl.dns.army/fullchain.pem
+sudo cp /etc/letsencrypt/live/s11hattl.dns.army/fullchain.pem .
+sudo chmod a+r fullchain.pem 
+sudo stat /etc/letsencrypt/live/s11hattl.dns.army/privkey.pem
+sudo cp /etc/letsencrypt/live/s11hattl.dns.army/privkey.pem .
+sudo chmod a+r privkey.pem 
+scp privkey.pem fullchain.pem root@rockpiha:~
+ssh rockpiha
+ssh root@rockpiha
+sudo systemctl restart sddm
+exit
+sudo pacman -Syu
+exit
+sudo pacman -Syu
+exit
+bitbake small-server-image
+exit
+ls /home/reinhard/Develop/kde/build-elisa-Desktop-Debug
+ls /home/reinhard/Develop/kde/build-elisa-Desktop-Debug/bin/org/kde/elisa/
+ls -l /home/reinhard/Develop/kde/build-elisa-Desktop-Debug/bin/org/kde/elisa/
+sudo chown reinhard:reinhard /home/reinhard/Develop/kde/build-elisa-Desktop-Debug/bin/org/kde/elisa/plugins.qmltypes
+ls -l /home/reinhard/Develop/kde/build-elisa-Desktop-Debug/bin/org/kde/elisa/
+ls -l /home/reinhard/Develop/kde/elisa/src/plugins.qmltypes
+ls -l /home/reinhard/Develop/kde/elisa/src
+git status
+git checkout src/plugins.qmltypes
+git diff src/mediaplaylist.cpp
+ls
+../build-elisa-Desktop-Debug/bin/elisa
+QT_LOGGING_RULES="*.debug=false;org.kde.elisa.playlist=true"
+../build-elisa-Desktop-Debug/bin/elisa
+export QT_LOGGING_RULES="*.debug=false;org.kde.elisa.playlist=true"
+../build-elisa-Desktop-Debug/bin/elisa
+pwd
+pwd
+git stash list 
+git stash list -v
+git stash -h
+git stash show
+git stash show -v
+../build-elisa-Desktop-Debug/bin/elisa
+git stash apply 
+git diff
+../build-elisa-Desktop-Debug/bin/elisa
+../build-elisa-Desktop-Debug/bin/elisa
+../build-elisa-Desktop-Debug/bin/elisa
+bitbake small-server-image
+bitbake small-server-image
+ cd /home/reinhard/Develop/oe_yocto/rock-pi-4-small-server/config
+ clear
+ls -l
+ cd /
+ls -a
+git status
+git diff
+git status
+git diff src/manageaudioplayer.cpp
+git diff src/audiowrapper_libvlc.cpp
+git status
+git log
+git log
+git diff >65f1949a895953914483e1a5d1a8c114c17c9d01.diff
+cat 65f1949a895953914483e1a5d1a8c114c17c9d01.diff 
+git pull
+git stash show
+git stash
+git status
+git pull
+git status
+pwd
+cd ..
+cd 
+cd Develop/kde/elisa/
+git status
+git pull
+git status
+git stash -v
+git stash list -v
+git stash list 
+git stash 
+git pull
+ls -l /home/reinhard/Develop/kde/elisa/src/plugins.qmltypes
+git status
+git checkout src/plugins.qmltypes
+git status
+git diff origin/master 
+git status
+git diff src/audiowrapper_libvlc.cpp
+ cd /home/reinhard
+ clear
+ cd /home/reinhard/Develop
+ cd /
+sudo pacman -Syu
+teams-for-linux 
+xeyes 
+ps w
+ps aux
+ps aux
+ps aux
+ps aux >ps.txt
+ps aux | grep teams >ps.txt
+teams-for-linux --ozone-platform=wayland
+kwrite ps.txt 
+kwrite ps.txt &
+/opt/teams-for-linux/teams-for-linux --enable-crashpad --ozone-platform=wayland
+/opt/teams-for-linux/teams-for-linux --enable-crashpad --ozone-platform=wayland
+/opt/teams-for-linux/teams-for-linux --enable-crashpad --ozone-platform=wayland
+/opt/teams-for-linux/teams-for-linux --enable-crashpad --ozone-platform=wayland
+sudo pacman -Syu
+sudo remote
+bitbake small-server-image
+exit
+bitbake small-server-image
+bitbake libarchive
+bitbake libarchive-native
+bitbake libarchive-native -cclean
+bitbake libarchive-native -cclean
+bitbake libarchive-native 
+bitbake libarchive-native 
+bitbake small-server-image
+podman images
+podman images ls
+podman image crops
+podman pull crops/poky
+podman pull crops/poky
+podman pull crops/poky
+podman 
+podman start crops
+podman images ls
+podman images 
+podman start crops/poky
+exit
+buildah images
+buildah containers
+container=$(buildah from fedora)
+echo $container
+buildah run $container bash
+buildah run $container java
+exit
+scratchmnt=$(buildah mount $newcontainer)
+echo $scratchmnt
+echo $newcontainer
+newcontainer=$(buildah from scratch)
+ buildah containers
+scratchmnt=$(buildah mount $newcontainer)
+echo $newcontainer
+echo $scratchmnt
+exi
+exit
+buildah containers 
+buildah --help
+buildah containers 
+buildah rm 7c5db5b632ab
+buildah rm debian-etch-amd64-working-container
+sudo buildah rm debian-etch-amd64-working-container
+buildah rm debian-etch-amd64-working-container
+buildah rm 31bfd1975cb1
+buildah rm a6184f5b9ae6
+newcontainer=$(buildah from scratch)
+echo $newcontainer
+buildah containers 
+buildah images
+buildah run $newcontainer bash
+scratchmnt=$(buildah mount $newcontainer)
+buildah unshare
+buildah images
+exit
+podman --runtime 
+podman --runtime crun
+pacman -Q | grep fuse
+podman --runtime 
+sudo nano /etc/containers/storage.conf
+ls /etc/containers/storage.conf
+ls /etc/containers/storage.conf*
+sudo mv /etc/containers/storage.conf.pacnew /etc/containers/storage.conf
+sudo nano /etc/containers/storage.conf
+podman --runtime 
+podman --runtime crun
+podman --runtime 
+cat /etc/subuid
+cat /etc/subgid
+sysctl "net.ipv4.ping_group_range=0 2000000"
+sudo sysctl "net.ipv4.ping_group_range=0 2000000"
+sudo sysctl -w "net.ipv4.ping_group_range=0 2000000"
+sudo nano /etc/sysctl.d/uping.conf
+sudo nano /etc/sysctl.d/uping.conf
+df
+podman images
+podman container 
+podman container ls
+docker container
+buildah images
+buildah rmi localhost/d10_1
+buildah rmi localhost/wandboard
+df
+buildah images
+buildah rmi localhost/d10_*
+buildah rmi localhost/d10_wandboard 
+buildah rmi localhost/d10_odroid_c1 
+buildah rmi localhost/d10_testsys_1 
+df
+buildah images
+buildah rmi 3c4b7bdc02d4 b105e135fbe8 5f95ba1e2f69 acf5015296e8 3d1174040787 5621c72ec78d c152a08d44c7 3622c7a39d7a  8b0f75a5fc41
+df
+buildah images
+buildah rmi ced3ed5f2678 b0ddb0121f04 0a996b300c68 e869e853c261
+buildah images
+buildah rmi docker.io/homegear/homegear 
+buildah rmi docker.io/homegear/homegear 
+buildah images
+df
+buildah rmi 0e22b8ce9612 7d07bfbfd958 68652aad252b bf349f26f208 ecc5f3a06c76 c197b0ab774f
+buildah images
+buildah rmi 5eb66153917a 243373a78108 971452c94376 77be327e4b63 536f3995adeb 177d5adf0c6c e21dbcc7c9de
+buildah images
+buildah rmi 7c5db5b632ab 39b2d601c06c 110993a1b7c1 9f69ed8013f5 4884fe4e8bb4 98ffdbffd207 8683fcc5fa31
+buildah containers 
+DF
+buildah rm debian-etch-amd64-working-container
+df
+df -h
+podman -help
+podman pull --help
+podman pull fedora:35
+podman images
+podman run --help
+podman images
+podman run --help
+podman run fedora:35 -it bash
+podman run fedora:35 -i -t bash
+podman run fedora:35 bash
+podman run fedora:35 ls
+podman run fedora:35 uname -a
+podman run fedora:35 uname lsb_release
+podman run fedora:35 uname lsb_release --help
+podman run fedora:35 uname lsb_release -a
+podman run fedora:35 -i bash
+podman container 
+podman container ls
+podman ps
+podman ps -a
+podman rm 32877de5f43b d09b03fa29db c083774506f4 9304012aded2 5f79587e4e68 d0da833e0893 d95af34b8aa1 4d0d67a18ab9 f45fd0af4e77
+podman ps -a
+podman -h
+podman run -h
+podman run --help
+podman run --rm -i -t fedora:35 /bin/bash
+podman run --rm -i -t fedora:35 false
+echo $?
+podman run --rm -i -t fedora:35 true
+echo $?
+podman ps -a
+buildah --help
+buildah rm working-container working-container-1
+buildah containers 
+buildah rm 0cf8f368ee03f0ccc86bb8836b68a513c43e57cc8a609c72c77e1f9780ac6d84 a6184f5b9ae631a1fe3a2f8d5c62cd294b136de4dbb27bc8195debbc7de48214 f48d6e62df5338619620095df22df001a0c95255a2af3d238ed3f8273d931947 
+buildah containers 
+buildah rm debian-etch-amd64-working-container
+sudo pacman -Syu
+sudo pacman -Syu
+exit
+sudo systemctl restart sddm
+exit
+podman build --build-arg BGID=$groupid --build-arg BUID=$UID --build-arg USER=$USER --build-arg HOME=$HOME -t ydev1 u20.10
+pacman -Q | grep slirp
+sysctl kernel.unprivileged_userns_clone
+cat /etc/subuid
+podman system migrate
+podman build --build-arg BGID=$groupid --build-arg BUID=$UID --build-arg USER=$USER --build-arg HOME=$HOME -t ydev1 u20.10
+ls /proc/sys/fs/binfmt_misc
+podman pull docker.io/archlinux
+podman run --rm -i -t archlinux:latest /bin/sh
+podman run --rm -i -t fedora:35 /bin/sh
+podman run --cap-add all --rm -i -t fedora:35 /bin/sh
+podman run --rm -i -t archlinux:latest /bin/sh
+podman -h
+podman build u20.10/
+kwrite u20.10/
+kwrite u20.10/Dockerfile 
+sudo pacman -S devtools 
+ip addr
+ cd /home/reinhard/Develop/oe_yocto/podman/u20.10
+ clear
+ cd /
+podman images
+podman container 
+podman container  ls
+podman ps -a
+podman run -i -t fedora:35 /bin/bash
+podman ps -a
+podman rm musing_stonebraker
+podman images
+podman search fedora
+podman images
+podman pull registry.fedoraproject.org/fedora-toolbox:f35
+podman search homeassistant
+podman pull registry.fedoraproject.org/fedora-toolbox
+podman images
+podman run -t -i --rm fedora-toolbox /bin/bash
+podman images
+podman search ubuntu
+podman search -h
+podman search --list-tags ubuntu 
+podman pull docker.io/library/ubuntu:20.10
+podman images
+podman ps -a
+podman run -i -t ubuntu:20.10 /bin/bash
+podman ps -a
+podman rm zealous_keldysh
+cd Develop/oe_yocto/
+ls
+mkdir podman
+cd podman/
+exit
+ls
+dnf -h
+g++
+dnf update
+exit
+ls
+whoami
+su
+exit
+g++
+sudo - su
+sudo dnf install make
+sudo dnf install cmake
+sudo dnf install ninja
+dnf search ninja
+dnf install ninja-build.x86_64
+sudo dnf install ninja-build.x86_64
+exit
+sudo dnf search zstd
+dnf install zstd.x86_64
+sudo dnf install zstd.x86_64
+exit
+sudo dnf install chrpath cpio diffstat file lz4c patch rpcgen
+sudo dnf install chrpath cpio diffstat file patch rpcgen
+exit
+dnf search lz4c
+dnf search lz4
+sudo dnf install lz4-libs
+sudo dnf install lz4
+exit
+bitbake small-server-image.bb 
+dnf search en_US
+dnf search locale
+exit
+bitbake small-server-image.bb 
+sudo dnf install glibc-langpack-en
+sudo dnf reinstall glibc-common
+exit
+pstree -p
+pstree -pau  | grep podman
+ps aux | grep podman
+ps aux | grep podman
+podman ps
+exit
+bitbake small-server-image.bb 
+sudo dnf install 'perl(Thread::Queue)'
+bitbake small-server-image.bb 
+bitbake-layers show
+bitbake-layers show-layers
+bitbake small-server-image
+sudo dnf install 'perl(File::Compare)'
+bitbake small-server-image
+sudo dnf install 'perl(File::Copy)'
+bitbake small-server-image
+sudo dnf install 'perl(File::locale)'
+sudo dnf install 'perl(File::Locale)'
+sudo dnf install 'perl(Locale)'
+sudo dnf install 'perl(Locale::encode)'
+sudo dnf Perl
+sudo dnf search Perl
+sudo dnf search Perl | grep locale
+sudo dnf install 'perl(Locale::Codes)'
+bitbake small-server-image
+sudo dnf search Perl | grep locale
+sudo dnf install 'perl(locale)'
+bitbake small-server-image
+sudo dnf install 'perl(File::Open)'
+sudo dnf search Perl | grep -i open
+sudo dnf install 'perl(open)'
+bitbake small-server-image
+sudo dnf search Perl 
+sudo dnf search Perl | grep core
+sudo dnf search Perl | grep -i core
+sudo dnf search Perl | grep -i findbin
+sudo dnf install 'perl(FindBin)'
+bitbake small-server-image
+ ~/.bash_history 
+exit
