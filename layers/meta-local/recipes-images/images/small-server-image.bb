@@ -17,7 +17,11 @@ CORE_IMAGE_BASE_INSTALL += " \
 networkmanager networkmanager-nmtui networkmanager-nmcli \
 networkmanager-wifi \
 firewalld \
-openssh-sftp-server openssh-sftp"
+openssh-sftp-server \ 
+openssh-sftp \
+tcpdump \
+podman \
+"
 
 #
 # services
