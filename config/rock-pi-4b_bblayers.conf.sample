@@ -19,5 +19,6 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-rockchip \
   ##OEROOT##/../meta-arm/meta-arm \
   ##OEROOT##/../meta-arm/meta-arm-toolchain \
+  ##OEROOT##/../meta-virtualization \
   ##OEROOT##/../meta-local \
 "

@@ -227,7 +227,7 @@ CONF_VERSION = "2"
 ##################################
 # make it a raw systemd distro
 #
-DISTRO_FEATURES:append = " alsa systemd wifi usbhost usbgadget pci wayland opengl keyboard pam"
+DISTRO_FEATURES:append = " alsa systemd wifi usbhost usbgadget pci wayland opengl keyboard pam virtualization"
 DISTRO_FEATURES:remove = "nfs ofono x11"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_dev_manager = "systemd"
