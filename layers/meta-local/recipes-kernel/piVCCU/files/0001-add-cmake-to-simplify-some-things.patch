@@ -1,0 +1,67 @@
+From db739622c42f07ec20d0140a16e4660ac828880b Mon Sep 17 00:00:00 2001
+From: Reinhard <reinhard.doerner@gmail.com>
+Date: Tue, 4 Oct 2022 20:59:55 +0200
+Subject: [PATCH] add cmake to simplify some things
+
+---
+ CMakeLists.txt                     | 16 ++++++++++++++++
+ detect_radio_module/CMakeLists.txt | 14 ++++++++++++++
+ wait_sysfs_notify/CMakeLists.txt   |  5 +++++
+ 3 files changed, 35 insertions(+)
+ create mode 100644 CMakeLists.txt
+ create mode 100644 detect_radio_module/CMakeLists.txt
+ create mode 100644 wait_sysfs_notify/CMakeLists.txt
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..e167752
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,16 @@
++cmake_minimum_required(VERSION 3.14)
++project(pivccu CXX)
++
++add_subdirectory(detect_radio_module)
++add_subdirectory(wait_sysfs_notify)
++
++install(TARGETS 
++        detect_radio_module wait_sysfs_notify
++    DESTINATION bin
++)
++
++install(FILES 
++        pivccu/host3/99-pivccu.rules 
++    DESTINATION 
++        /etc/udev/rules.d
++)
+diff --git a/detect_radio_module/CMakeLists.txt b/detect_radio_module/CMakeLists.txt
+new file mode 100644
+index 0000000..2a1ed6e
+--- /dev/null
++++ b/detect_radio_module/CMakeLists.txt
+@@ -0,0 +1,14 @@
++
++add_executable(detect_radio_module
++    hmframe.cpp  
++    hmframe.h  
++    main.cpp  
++    radiomoduleconnector.cpp  
++    radiomoduleconnector.h  
++    radiomoduledetector.cpp  
++    radiomoduledetector.h  
++    radiomoduledetector_utils.h  
++    streamparser.cpp  
++    streamparser.h
++)
++
+diff --git a/wait_sysfs_notify/CMakeLists.txt b/wait_sysfs_notify/CMakeLists.txt
+new file mode 100644
+index 0000000..39fed40
+--- /dev/null
++++ b/wait_sysfs_notify/CMakeLists.txt
+@@ -0,0 +1,5 @@
++
++add_executable(wait_sysfs_notify
++    main.cpp  
++)
++

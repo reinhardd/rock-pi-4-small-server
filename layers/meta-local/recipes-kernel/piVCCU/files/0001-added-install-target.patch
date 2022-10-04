@@ -1,0 +1,23 @@
+From f619c8ce1e69ed173bbc0dac74a619bc15db9acf Mon Sep 17 00:00:00 2001
+From: Reinhard <reinhard.doerner@gmail.com>
+Date: Mon, 3 Oct 2022 12:23:14 +0200
+Subject: [PATCH] added install target
+
+---
+ kernel/Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/kernel/Makefile b/kernel/Makefile
+index 6bcb524..138291e 100644
+--- a/kernel/Makefile
++++ b/kernel/Makefile
+@@ -29,6 +29,9 @@ endif
+ all:
+ 	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) modules
+ 
++modules_install:
++	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) modules_install
++
+ clean:
+ 	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) clean
+ 
